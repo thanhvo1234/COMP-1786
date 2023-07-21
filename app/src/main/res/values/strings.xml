@@ -1,5 +1,7 @@
 <resources>
-
-    <string name="app_name">comp1786-l2-android-basics</string>
-
+    <string name="app_name">comp1786-L3-4-android-gui</string>
+    <string-array name="workStatus">
+        <item>Employed</item>
+        <item>Unemployed</item>
+    </string-array>
 </resources>
