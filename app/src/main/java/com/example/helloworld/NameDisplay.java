@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 public class NameDisplay extends AppCompatActivity {
@@ -42,5 +43,10 @@ public class NameDisplay extends AppCompatActivity {
         // Display name with color BLUE
         nameDisplay.setTextColor(Color.BLUE);
         nameDisplay.setText("Hello " + name);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 }
