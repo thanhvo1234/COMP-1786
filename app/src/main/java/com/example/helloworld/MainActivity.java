@@ -56,8 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public  void updateDOB(LocalDate dob){
-        TextView dobControl = findViewById(R.id.dob_control);
-        dobControl.setText(dob.toString());
+        // ...
     }
     // Define variables to reference the layout
     EditText nameInput;
@@ -105,33 +104,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dobControl = findViewById(R.id.dob_control);
+        // ...
 
-        dobControl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DialogFragment newFragment = new DatePickerFragment();
-                newFragment.show(getSupportFragmentManager(), "datePicker");
-            }
-        });
-
+        // Refer the Spinner from the layout
         sp = findViewById(R.id.spinner);
+
+        // Refer the button from the layout
         submitBtn = findViewById(R.id.submit_btn);
+
+        // Adding behavior to the button
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheckBox cb = findViewById(R.id.checkBox);
-
-                if (!cb.isChecked()){
-                    Toast
-                            .makeText(
-                                    MainActivity.this,
-                                    "You must check the box",
-                                    Toast.LENGTH_LONG
-                            )
-                            .show();
-                    return;
-                }
                 getInputs();
             }
         });
